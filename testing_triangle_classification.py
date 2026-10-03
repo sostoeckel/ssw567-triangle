@@ -13,18 +13,18 @@ def classify_triangle(s1,s2,s3):
     triangle is equilateral.
     '''
     if s1 == s2 and s1 == s3:
-        type = "Equilateral"
+        triangle = "Equilateral"
     elif s1 == s2 and s1 != s3 and s2 != s3:
-        type = "Isosceles"
+        triangle = "Isosceles"
     elif s1 != s2 and s2 != s3 and s1 != s3:
-        type = "Scalene"
+        triangle = "Scalene"
     if s1**2 + s2**2 == s3**2:
-        type = "Right"
+        triangle = "Right"
     elif s2**2 + s3**2 == s1**2:
-        type = "Right"
+        triangle = "Right"
     elif s3**2 + s1**2 == s2**2:
-        type = "Right"
-    return type
+        triangle = "Right"
+    return triangle
 
 class TriangleTestCase(unittest.TestCase):
     '''
